@@ -1,0 +1,7 @@
+Sitemap: http://www.zurilogisticsgroup.co.za/sitemap_index.xml
+Sitemap: http://www.zurilogisticsgroup.co.za/category-sitemap.xml
+Sitemap: http://www.zurilogisticsgroup.co.za/page-sitemap.xml
+Sitemap: http://www.zurilogisticsgroup.co.za/post-sitemap.xml
+Sitemap: http://www.zurilogisticsgroup.co.za/forum-sitemap.xml
+Sitemap: http://www.zurilogisticsgroup.co.za/topic-sitemap.xml
+Sitemap: http://www.zurilogisticsgroup.co.za/post_tag-sitemap.xml
