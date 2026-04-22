@@ -619,7 +619,33 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+const axios = require('axios');
+let data = JSON.stringify({
+  "q": "apple inc"
+});
 
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://google.serper.dev/search',
+  headers: { 
+    'X-API-KEY': 'b6815356f1266c2a6e04edd846769e1aeec9469c', 
+    'Content-Type': 'application/json'
+  },
+  data : data
+};
+
+async function makeRequest() {
+  try {
+    const response = await axios.request(config);
+    console.log(JSON.stringify(response.data));
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
+
+makeRequest();
 </body>
 
 </html>
