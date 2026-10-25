@@ -1,0 +1,9 @@
+{
+  "name": "zuri-logistics-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Zuri Logistics Group website with Cloudflare Pages Functions and MySQL support",
+  "dependencies": {
+    "mysql2": "^3.15.3"
+  }
+}
