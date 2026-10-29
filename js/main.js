@@ -41,17 +41,11 @@
         }
     }
 
-    // Automatic English/French translation.
-    // French-speaking browser visitors are offered French automatically on first visit.
-    var browserLanguage = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
-    var prefersFrench = browserLanguage.indexOf('fr') === 0;
+    // Automatic English/French translation based on visitor IP country.
+    // Keep a visitor's existing Google Translate choice; only auto-select on first visit.
     var hasTranslationChoice = document.cookie.split(';').some(function (cookie) {
         return cookie.trim().indexOf('googtrans=') === 0;
     });
-
-    if (prefersFrench && !hasTranslationChoice) {
-        document.cookie = 'googtrans=/en/fr; path=/; SameSite=Lax';
-    }
 
     window.googleTranslateElementInit = function () {
         if (!document.getElementById('google_translate_element') || !window.google || !google.translate) return;
@@ -63,10 +57,43 @@
         }, 'google_translate_element');
     };
 
-    var translateScript = document.createElement('script');
-    translateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    translateScript.async = true;
-    document.head.appendChild(translateScript);
+    function loadGoogleTranslate() {
+        if (document.querySelector('script[data-google-translate]')) return;
+        var translateScript = document.createElement('script');
+        translateScript.setAttribute('data-google-translate', 'true');
+        translateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        translateScript.async = true;
+        document.head.appendChild(translateScript);
+    }
+
+    if (hasTranslationChoice) {
+        // Do not override a language the visitor already selected.
+        loadGoogleTranslate();
+    } else {
+        // IP geolocation: French-first countries use French; other countries default to English.
+        // If the lookup fails, the website still loads in English.
+        var frenchCountryCodes = [
+            'FR', 'CD', 'CG', 'CI', 'SN', 'CM', 'GA', 'BJ', 'BF', 'BI',
+            'CF', 'TD', 'KM', 'DJ', 'GQ', 'GN', 'MG', 'ML', 'NE', 'TG',
+            'BE', 'CH', 'LU', 'MC', 'HT'
+        ];
+
+        fetch('https://ipapi.co/json/', { cache: 'no-store' })
+            .then(function (response) {
+                if (!response.ok) throw new Error('IP location lookup failed');
+                return response.json();
+            })
+            .then(function (location) {
+                var countryCode = (location && location.country_code ? location.country_code : '').toUpperCase();
+                if (frenchCountryCodes.indexOf(countryCode) !== -1) {
+                    document.cookie = 'googtrans=/en/fr; path=/; SameSite=Lax';
+                }
+            })
+            .catch(function () {
+                // Keep the English default if IP location is unavailable.
+            })
+            .then(loadGoogleTranslate);
+    }
 
     // Spinner
     var spinner = function () {
