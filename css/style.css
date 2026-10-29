@@ -198,3 +198,51 @@ section, .container-xxl { overflow: hidden; }
     .container-xxl.py-5, .container-fluid.overflow-hidden { padding-top: 55px !important; padding-bottom: 55px !important; }
     .header-carousel .owl-carousel-item .btn { margin-bottom: 10px; width: auto; }
 }
+
+
+/* Inline, responsive footer layout */
+.footer > .container.py-5 > .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.25rem 0;
+}
+.footer > .container.py-5 > .row > [class*="col-"] {
+    flex: 1 1 240px;
+    width: auto;
+    max-width: none;
+}
+.footer h4 {
+    margin-bottom: .75rem !important;
+}
+.footer p {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 .9rem .65rem 0;
+    vertical-align: middle;
+}
+.footer .btn.btn-link {
+    display: inline-flex;
+    width: auto;
+    padding: .25rem .6rem .25rem 0;
+    margin-right: .55rem;
+    white-space: normal;
+    vertical-align: middle;
+}
+.footer .copyright .row {
+    display: flex;
+    align-items: center;
+}
+.footer .copyright [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+}
+@media (max-width: 767.98px) {
+    .footer > .container.py-5 > .row > [class*="col-"] {
+        flex-basis: 100%;
+    }
+    .footer p,
+    .footer .btn.btn-link {
+        font-size: .95rem;
+    }
+}
