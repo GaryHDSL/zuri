@@ -26,7 +26,10 @@
         if (collapse) {
             var navContainer = collapse.querySelector('.navbar-nav');
             if (navContainer) {
-                navContainer.innerHTML = navLinks + '<div class="nav-item d-flex align-items-center px-3" id="language-switcher"><span class="me-2 small">Language</span><div id="google_translate_element"></div></div>';
+                // Hide the visible language section on Home, About, and Services,
+                // while keeping the translation element available to Google Translate.
+                var hideLanguageSection = ['index.html', 'about.html', 'service.html'].indexOf(currentPage) !== -1;
+                navContainer.innerHTML = navLinks + '<div class="nav-item d-flex align-items-center px-3" id="language-switcher"' + (hideLanguageSection ? ' style="display:none;"' : '') + '><span class="me-2 small">Language</span><div id="google_translate_element"></div></div>';
             }
 
             var phone = collapse.querySelector('h4');
