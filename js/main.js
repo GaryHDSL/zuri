@@ -26,7 +26,7 @@
         if (collapse) {
             var navContainer = collapse.querySelector('.navbar-nav');
             if (navContainer) {
-                navContainer.innerHTML = navLinks;
+                navContainer.innerHTML = navLinks + '<div class="nav-item d-flex align-items-center px-3" id="language-switcher"><span class="me-2 small">Language</span><div id="google_translate_element"></div></div>';
             }
 
             var phone = collapse.querySelector('h4');
@@ -40,6 +40,33 @@
             }
         }
     }
+
+    // Automatic English/French translation.
+    // French-speaking browser visitors are offered French automatically on first visit.
+    var browserLanguage = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+    var prefersFrench = browserLanguage.indexOf('fr') === 0;
+    var hasTranslationChoice = document.cookie.split(';').some(function (cookie) {
+        return cookie.trim().indexOf('googtrans=') === 0;
+    });
+
+    if (prefersFrench && !hasTranslationChoice) {
+        document.cookie = 'googtrans=/en/fr; path=/; SameSite=Lax';
+    }
+
+    window.googleTranslateElementInit = function () {
+        if (!document.getElementById('google_translate_element') || !window.google || !google.translate) return;
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,fr',
+            autoDisplay: false,
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    };
+
+    var translateScript = document.createElement('script');
+    translateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    translateScript.async = true;
+    document.head.appendChild(translateScript);
 
     // Spinner
     var spinner = function () {
