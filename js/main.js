@@ -26,7 +26,7 @@
         if (collapse) {
             var navContainer = collapse.querySelector('.navbar-nav');
             if (navContainer) {
-                navContainer.innerHTML = navLinks + '<div class="nav-item d-flex align-items-center px-3" id="language-switcher"><span class="me-2 small">Language</span><div id="google_translate_element"></div></div>';
+                navContainer.innerHTML = navLinks;
             }
 
             var phone = collapse.querySelector('h4');
@@ -39,6 +39,17 @@
                 login.remove();
             }
         }
+    }
+
+    // Keep Google's translation widget available for automatic translation, but hide its manual selector.
+    if (!document.getElementById('google_translate_element')) {
+        var translateContainer = document.createElement('div');
+        translateContainer.id = 'google_translate_element';
+        translateContainer.setAttribute('aria-hidden', 'true');
+        translateContainer.style.position = 'fixed';
+        translateContainer.style.left = '-10000px';
+        translateContainer.style.top = '0';
+        document.body.appendChild(translateContainer);
     }
 
     // Automatic English/French translation based on visitor IP country.
