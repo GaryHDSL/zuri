@@ -38,6 +38,25 @@
     .zuri-cta h2,.zuri-cta p{color:#fff}
     .zuri-footer-logo{max-width:190px;max-height:65px;object-fit:contain}
     @media(max-width:767px){.zuri-hero{min-height:560px;background-position:62% center}.zuri-hero p{font-size:16px}.zuri-cta{padding:30px 22px}}
+  
+    .zuri-topbar{background:#031b30!important}
+    .navbar{min-height:104px}
+    .navbar-brand img{max-height:82px!important;width:auto}
+    .navbar .nav-link{font-weight:700;color:#0a2745!important;padding:1.8rem 1rem!important}
+    .navbar .nav-link.active,.navbar .nav-link:hover{color:#b78308!important;border-bottom:3px solid #f5b51b}
+    .zuri-hero{min-height:440px;background-image:linear-gradient(90deg,rgba(2,19,34,.88),rgba(2,19,34,.42) 52%,rgba(2,19,34,.03)),url('img/carousel-1.jpg');background-position:center 54%}
+    .zuri-hero h1{font-size:clamp(2.4rem,4.3vw,3.6rem);max-width:730px}
+    .zuri-hero .zuri-section-label{font-size:17px;color:#f5b51b}
+    .zuri-quick-services{background:#fff}
+    .zuri-quick-tile{height:100%;min-height:178px;padding:20px 12px 14px;display:flex;align-items:center;flex-direction:column;justify-content:flex-start;background:#fbfcfd;border:1px solid #e8edf2;border-radius:4px;text-decoration:none;color:#0a2745;box-shadow:0 3px 12px rgba(3,27,48,.04)}
+    .zuri-quick-tile i{font-size:35px;color:#0b3762;margin-bottom:12px}
+    .zuri-quick-tile strong{font-size:14px;line-height:1.3;margin-bottom:8px}
+    .zuri-quick-tile span{font-size:13px;line-height:1.5;color:#536b83;max-width:190px}
+    .zuri-quick-tile small{font-size:12px;font-weight:700;color:#0b3762;margin-top:auto;padding-top:10px}
+    .zuri-quick-tile:hover{background:#f7f9fc;transform:translateY(-3px);color:#0a2745}
+    .footer{background:#031b30!important}
+    @media(min-width:1200px){.zuri-hero{min-height:440px}}
+    @media(max-width:767px){.navbar{min-height:76px}.navbar-brand img{max-height:55px!important}.navbar .nav-link{padding:.7rem 1rem!important}.zuri-hero{min-height:490px}.zuri-quick-tile{min-height:190px}}
   </style>
   <script type="application/ld+json">
   {
@@ -45,7 +64,7 @@
     "@type":"Organization",
     "name":"Zuri Logistics Group",
     "url":"https://zurilogisticsgroup.co.za/",
-    "email":"sales@zurilogisticsgroup.co.za",
+    "email":"info@zurilogisticsgroup.co.za",
     "telephone":"+27638366355",
     "address":{"@type":"PostalAddress","streetAddress":"242 Highland Road, Kensington","addressLocality":"Johannesburg","addressRegion":"Gauteng","addressCountry":"ZA"}
   }
@@ -74,8 +93,8 @@
         <a href="index.html" class="nav-item nav-link active">Home</a>
         <a href="about.html" class="nav-item nav-link">About Us</a>
         <a href="service.html" class="nav-item nav-link">Services</a>
-        <a href="sourcing.html" class="nav-item nav-link">Sourcing</a>
-        <a href="https://ecu.zurilogisticsgroup.co.za/" class="nav-item nav-link">ECU Diagnostics</a>
+        <a href="fleet.html" class="nav-item nav-link">Fleet</a>
+        <a href="about.html#why-choose-us" class="nav-item nav-link">Why Choose Us</a>
         <a href="contact.html" class="nav-item nav-link">Contact</a>
       </div>
       <div class="px-3 px-lg-4 pb-3 pb-lg-0">
@@ -87,21 +106,23 @@
   <header class="zuri-hero">
     <div class="container py-5">
       <div class="row"><div class="col-lg-9">
-        <div class="zuri-section-label mb-3">Safe • Reliable • On Time</div>
-        <h1 class="mb-4">Moving Your Business Forward with <span style="color:#f5b51b">Reliable Logistics</span></h1>
-        <p class="mb-4">Your logistics partner for transport, mining support, truck repairs and supply-chain solutions across South Africa and the SADC region.</p>
-        <a href="service.html" class="btn btn-primary py-3 px-4 me-2 mb-2"><i class="fa fa-truck me-2"></i>Explore Our Services</a>
-        <a href="https://wa.me/27638366355?text=Hello%20Zuri%20Logistics%20Group%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="btn btn-outline-light py-3 px-4 mb-2"><i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp</a>
+        <div class="zuri-section-label mb-3">ZURI LOGISTICS GROUP</div>
+        <h1 class="mb-4">Your Trusted Partner<br>in <span style="color:#f5b51b">Logistics &amp; Transport</span></h1>
+        <p class="mb-4">We provide reliable, efficient and cost-effective logistics solutions for the mining, industrial and commercial sectors across South Africa and beyond.</p>
+        <a href="service.html" class="btn btn-primary py-3 px-4 me-2 mb-2"><i class="fa fa-truck me-2"></i>Our Services</a>
+        <a href="about.html" class="btn btn-outline-light py-3 px-4 mb-2"><i class="fab fa-whatsapp me-2"></i>About Us</a>
       </div></div>
     </div>
   </header>
 
-  <section class="py-4" style="background:#f6f8fa">
-    <div class="container"><div class="row g-3 text-center">
-      <div class="col-6 col-lg-3"><div class="py-2"><i class="fa fa-route fa-2x mb-2" style="color:#b78308"></i><h6 class="mb-0">Transport & Freight</h6></div></div>
-      <div class="col-6 col-lg-3"><div class="py-2"><i class="fa fa-hard-hat fa-2x mb-2" style="color:#b78308"></i><h6 class="mb-0">Mining Logistics</h6></div></div>
-      <div class="col-6 col-lg-3"><div class="py-2"><i class="fa fa-tools fa-2x mb-2" style="color:#b78308"></i><h6 class="mb-0">Truck Repairs</h6></div></div>
-      <div class="col-6 col-lg-3"><div class="py-2"><i class="fa fa-microchip fa-2x mb-2" style="color:#b78308"></i><h6 class="mb-0">ECU Diagnostics</h6></div></div>
+  <section class="zuri-quick-services py-3">
+    <div class="container-fluid px-lg-4"><div class="row g-2 text-center">
+      <div class="col-6 col-md-4 col-xl-2"><a class="zuri-quick-tile" href="service.html"><i class="fa fa-truck"></i><strong>Truck Transportation</strong><span>Safe and on-time delivery for your cargo.</span><small>Learn More&nbsp; →</small></a></div>
+      <div class="col-6 col-md-4 col-xl-2"><a class="zuri-quick-tile" href="service.html"><i class="fa fa-tools"></i><strong>Truck Repairs &amp; Maintenance</strong><span>Keep your fleet on the road with expert support.</span><small>Learn More&nbsp; →</small></a></div>
+      <div class="col-6 col-md-4 col-xl-2"><a class="zuri-quick-tile" href="https://ecu.zurilogisticsgroup.co.za/"><i class="fa fa-microchip"></i><strong>ECU Diagnostics &amp; Programming</strong><span>Advanced diagnostics for all makes and models.</span><small>Learn More&nbsp; →</small></a></div>
+      <div class="col-6 col-md-4 col-xl-2"><a class="zuri-quick-tile" href="service.html"><i class="fa fa-hard-hat"></i><strong>Mining &amp; Industrial Logistics</strong><span>Supporting your operations from source to site.</span><small>Learn More&nbsp; →</small></a></div>
+      <div class="col-6 col-md-4 col-xl-2"><a class="zuri-quick-tile" href="fleet.html"><i class="fa fa-shield-alt"></i><strong>Fleet Rental</strong><span>Flexible truck rental solutions on request.</span><small>Learn More&nbsp; →</small></a></div>
+      <div class="col-6 col-md-4 col-xl-2"><a class="zuri-quick-tile" href="service.html"><i class="fa fa-globe"></i><strong>International Logistics</strong><span>Connecting your business globally.</span><small>Learn More&nbsp; →</small></a></div>
     </div></div>
   </section>
 
@@ -153,7 +174,7 @@
     <div class="container"><div class="row align-items-center g-3">
       <div class="col-md-4"><div class="d-flex align-items-center"><i class="fa fa-phone-alt fa-2x me-3" style="color:#b78308"></i><div><small class="text-muted">Call our team</small><h5 class="mb-0"><a href="tel:+27638366355" style="color:#082746">+27 63 836 6355</a></h5></div></div></div>
       <div class="col-md-4"><div class="d-flex align-items-center"><i class="fa fa-envelope fa-2x me-3" style="color:#b78308"></i><div><small class="text-muted">Email enquiries</small><h6 class="mb-0"><a href="mailto:sales@zurilogisticsgroup.co.za" style="color:#082746">sales@zurilogisticsgroup.co.za</a></h6></div></div></div>
-      <div class="col-md-4"><div class="d-flex align-items-center"><i class="fa fa-map-marker-alt fa-2x me-3" style="color:#b78308"></i><div><small class="text-muted">Based in</small><h6 class="mb-0">Kensington, Johannesburg</h6></div></div></div>
+      <div class="col-md-4"><div class="d-flex align-items-center"><i class="fa fa-map-marker-alt fa-2x me-3" style="color:#b78308"></i><div><small class="text-muted">Based in</small><h6 class="mb-0">Johannesburg, Gauteng</h6></div></div></div>
     </div></div>
   </section>
 
@@ -161,7 +182,7 @@
     <div class="container py-5"><div class="row g-5">
       <div class="col-lg-4"><img src="img/logo.png" alt="Zuri Logistics Group logo" class="zuri-footer-logo mb-3"><p>Safe, reliable and on-time logistics support for business, mining and industrial operations.</p><a class="btn btn-primary mt-2" href="quote.html">Request a Quote</a></div>
       <div class="col-lg-4"><h5 class="text-white mb-4">Our Services</h5><p><a class="text-light" href="service.html">Transport & Freight</a></p><p><a class="text-light" href="service.html">Mining Logistics</a></p><p><a class="text-light" href="https://ecu.zurilogisticsgroup.co.za/">Truck Repairs & ECU Diagnostics</a></p><p><a class="text-light" href="sourcing.html">Sourcing & Procurement</a></p></div>
-      <div class="col-lg-4"><h5 class="text-white mb-4">Contact Us</h5><p><i class="fa fa-map-marker-alt me-2" style="color:#f5b51b"></i>242 Highland Road, Kensington, Johannesburg</p><p><i class="fa fa-phone-alt me-2" style="color:#f5b51b"></i><a class="text-light" href="tel:+27638366355">+27 63 836 6355</a></p><p><i class="fa fa-envelope me-2" style="color:#f5b51b"></i><a class="text-light" href="mailto:sales@zurilogisticsgroup.co.za">sales@zurilogisticsgroup.co.za</a></p><a href="https://wa.me/27638366355" class="btn btn-outline-light mt-2"><i class="fab fa-whatsapp me-2"></i>WhatsApp Zuri</a></div>
+      <div class="col-lg-4"><h5 class="text-white mb-4">Contact Us</h5><p><i class="fa fa-map-marker-alt me-2" style="color:#f5b51b"></i>Johannesburg, Gauteng, South Africa</p><p><i class="fa fa-phone-alt me-2" style="color:#f5b51b"></i><a class="text-light" href="tel:+27638366355">+27 63 836 6355</a></p><p><i class="fa fa-envelope me-2" style="color:#f5b51b"></i><a class="text-light" href="mailto:sales@zurilogisticsgroup.co.za">sales@zurilogisticsgroup.co.za</a></p><a href="https://wa.me/27638366355" class="btn btn-outline-light mt-2"><i class="fab fa-whatsapp me-2"></i>WhatsApp Zuri</a></div>
     </div></div>
     <div class="container"><div class="border-top border-secondary py-3 small">© 2026 Zuri Logistics Group. All Rights Reserved.</div></div>
   </footer>
