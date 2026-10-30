@@ -1,9 +1,9 @@
 /********** Zuri Logistics Group - Clean Site Styles **********/
 :root {
-    --primary: #FF3E41;
-    --secondary: #51CFED;
-    --light: #F8F2F0;
-    --dark: #060315;
+    --primary: #F5B51B;
+    --secondary: #D99A08;
+    --light: #F4F6F8;
+    --dark: #082746;
     --text: #3f4350;
     --muted: #6f7480;
 }
@@ -198,3 +198,38 @@ section, .container-xxl { overflow: hidden; }
     .container-xxl.py-5, .container-fluid.overflow-hidden { padding-top: 55px !important; padding-bottom: 55px !important; }
     .header-carousel .owl-carousel-item .btn { margin-bottom: 10px; width: auto; }
 }
+
+
+/* Zuri Logistics Group premium navy and gold refresh */
+:root { --zuri-navy:#082746; --zuri-deep:#04182b; --zuri-gold:#f5b51b; }
+body { color:#334155; }
+.navbar { border-top-color:var(--zuri-gold)!important; }
+.navbar-light .navbar-brand { background:var(--zuri-navy)!important; }
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active { color:var(--zuri-gold)!important; }
+.navbar-brand img { max-height:54px; }
+.btn.btn-primary { background:var(--zuri-gold)!important; border-color:var(--zuri-gold)!important; color:var(--zuri-deep)!important; }
+.btn.btn-primary:hover { background:#ffd05b!important; border-color:#ffd05b!important; }
+.btn.btn-secondary { background:var(--zuri-navy)!important; border-color:var(--zuri-navy)!important; }
+.text-primary, .text-secondary { color:var(--zuri-gold)!important; }
+.bg-primary { background-color:var(--zuri-navy)!important; }
+.bg-secondary { background-color:#17466f!important; }
+.header-carousel .owl-carousel-item img { filter:saturate(.9); }
+.header-carousel .owl-carousel-item h1 span,
+.header-carousel .owl-carousel-item h2 span { color:var(--zuri-gold)!important; }
+.service-item { border-top:4px solid var(--zuri-gold); }
+.service-item h4 { color:var(--zuri-navy); }
+.footer { background:var(--zuri-deep)!important; }
+.zuri-topbar { background:var(--zuri-deep); color:#fff; font-size:13px; }
+.zuri-topbar a { color:#fff; text-decoration:none; }
+.zuri-topbar i { color:var(--zuri-gold); }
+.zuri-eyebrow { color:var(--zuri-gold); letter-spacing:2px; font-weight:700; }
+.zuri-hero-note { border-left:4px solid var(--zuri-gold); padding-left:16px; }
+.zuri-service-icon { width:58px;height:58px;border-radius:14px;background:#fff6dc;color:var(--zuri-navy);display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:20px; }
+.zuri-band { background:linear-gradient(110deg,var(--zuri-deep),var(--zuri-navy)); color:#fff; }
+.zuri-band h2,.zuri-band h3,.zuri-band p { color:#fff; }
+.zuri-band .btn-outline-light:hover { color:var(--zuri-deep); }
+.zuri-stat { border-left:3px solid var(--zuri-gold); padding-left:18px; }
+.zuri-stat strong { display:block;color:var(--zuri-gold);font-size:27px; }
+.zuri-contact-strip { background:#f4f6f8;border-top:1px solid #e5eaf0;border-bottom:1px solid #e5eaf0; }
+@media(max-width:767px){.zuri-topbar .container{justify-content:center!important}.zuri-topbar .zuri-location{display:none}.header-carousel .owl-carousel-item,.header-carousel .owl-carousel-item img{height:540px;min-height:540px}.navbar-brand img{max-height:43px}}
