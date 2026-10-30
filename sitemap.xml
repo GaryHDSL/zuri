@@ -3,7 +3,8 @@
   <url><loc>https://zurilogisticsgroup.co.za/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://zurilogisticsgroup.co.za/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://zurilogisticsgroup.co.za/service.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://zurilogisticsgroup.co.za/mining.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://zurilogisticsgroup.co.za/mining.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zurilogisticsgroup.co.za/mineral-prices.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://zurilogisticsgroup.co.za/fleet.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://zurilogisticsgroup.co.za/repairs.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://zurilogisticsgroup.co.za/sourcing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
