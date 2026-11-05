@@ -18,7 +18,18 @@
         return '<a href="' + item.href + '" class="nav-item nav-link' + active + '">' + item.label + '</a>';
     }).join('');
 
+    // Premium moving service marquee above the navigation on every page.
     var navbar = document.querySelector('.navbar');
+    if (navbar && !document.querySelector('.zuri-site-marquee')) {
+        var marquee = document.createElement('div');
+        marquee.className = 'zuri-marquee zuri-site-marquee';
+        marquee.setAttribute('aria-label', 'Zuri Logistics Group services');
+        marquee.innerHTML = '<div class="zuri-marquee-track">' +
+            '<span>TRUCK REPAIRS</span><b>✦</b><span>ECU DIAGNOSTICS</span><b>✦</b><span>GEARBOX SERVICES</span><b>✦</b><span>LOGISTICS & TRANSPORT</span><b>✦</b><span>MINERAL SOURCING</span><b>✦</b>' +
+            '<span>TRUCK REPAIRS</span><b>✦</b><span>ECU DIAGNOSTICS</span><b>✦</b><span>GEARBOX SERVICES</span><b>✦</b><span>LOGISTICS & TRANSPORT</span><b>✦</b><span>MINERAL SOURCING</span><b>✦</b>' +
+            '</div>';
+        navbar.parentNode.insertBefore(marquee, navbar);
+    }
     if (navbar) {
         var collapse = navbar.querySelector('#navbarCollapse');
         if (collapse) {
