@@ -10,9 +10,7 @@
         { href: 'index.html', label: 'Home', page: 'index.html' },
         { href: 'about.html', label: 'About Zuri', page: 'about.html' },
         { href: 'service.html', label: 'Services', page: 'service.html' },
-        { href: 'sourcing.html', label: 'Sourcing', page: 'sourcing.html' },
-        { href: 'quote.html', label: 'Request a Quote', page: 'quote.html' },
-        { href: 'contact.html', label: 'Contact', page: 'contact.html' }
+        { href: 'sourcing.html', label: 'Sourcing', page: 'sourcing.html' },{ href: 'contact.html', label: 'Contact', page: 'contact.html' }
     ];
 
     var navLinks = navItems.map(function (item) {
