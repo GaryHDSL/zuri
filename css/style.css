@@ -309,3 +309,9 @@ body{overflow-x:hidden}
         font-size: 18px !important;
     }
 }
+
+
+/* Display navigation menu labels in capital letters */
+.navbar-light .navbar-nav .nav-link {
+    text-transform: uppercase !important;
+}
